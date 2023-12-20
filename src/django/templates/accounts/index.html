@@ -1,0 +1,12 @@
+{% extends './base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<div class="h2">Welcome {{ user.account_id }}</div>
+<!-- ↓追加 -->
+<a href="{% url 'accounts:logout' %}" class="btn btn-primary">Logout</a> 
+{% else %}
+<a href="{% url 'accounts:signup' %}" class="btn btn-primary">Signup</a>
+<a href="{% url 'accounts:login' %}" class="btn btn-primary">Login</a>
+{% endif %}
+{% endblock %}

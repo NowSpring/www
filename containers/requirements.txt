@@ -1,0 +1,6 @@
+django == 4.2.3
+django-bootstrap4
+django-upload-validator
+pdfminer.six
+django-widgets-improved
+argon2-cffi
